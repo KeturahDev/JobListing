@@ -36,6 +36,17 @@ namespace JobBoard.Tests
 
       Assert.AreEqual("software developer", Job.Jobs[1].Title);
     }
+    [TestMethod]
+    public void Find_ReturnsJobPostingGivenJobID_Job()
+    {
+      ContactInfo employer = new ContactInfo("Mark", 333, "yomark@gmail.com");
+      Job newJob = new Job ("web developer", "making websites", employer);
+
+      Job jobResult = Job.Find(1);
+
+      Assert.AreEqual(newJob.Title,jobResult.Title);
+
+    }
   }
   [TestClass]
   public class ContactInfoTest
