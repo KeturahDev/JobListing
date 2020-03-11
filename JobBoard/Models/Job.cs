@@ -9,8 +9,8 @@ namespace JobBoard.Models
     public ContactInfo ContactInfo {get;set;}
     public Job(string title, string description, ContactInfo contactInfo)
     {
-      Title = "title";
-      Description = "description";
+      Title = title;
+      Description = description;
       ContactInfo = contactInfo;
     }
   }
