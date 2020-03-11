@@ -34,7 +34,7 @@ namespace JobBoard.Tests
       Job resultJob1 = newJob1;
       Job resultJob2 = newJob2;
 
-      Assert.AreEqual("software dev", Job.Jobs[1].Title);
+      Assert.AreEqual("software developer", Job.Jobs[1].Title);
     }
   }
   [TestClass]
