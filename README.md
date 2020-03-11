@@ -17,7 +17,7 @@ This project is being created with the intention of practing object-in-object fu
 | :------------- |:-------------| :-------------------|
 | Allow user to add job listing | *open job page* Add a description *click* | *form page opens* |
 | Displays job listing on form submit | *form filled* *submit*  | *Job page opens with new listing* |
-| multiple can be added and displayed | repeating last two steps  | *Job page opens with multiple listing* |
+| multiple can be added and displayed | repeating last two steps  | *Job page opens with multiple listing* !! |
 | Job listing can be individually viewed | *job listing page open* *user clicks on individual listing* | *Individual Job page apears* |
 | Job listing can be removed | Individual job listing [remove] *click* | *Job listing page apears without individual job listing* |
 
