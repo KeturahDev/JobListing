@@ -7,6 +7,7 @@ namespace JobBoard.Models
     public string Title {get;set;}
     public string Description {get;set;}
     public ContactInfo ContactInfo {get;set;}
+    public int Id {get; set;}
     public static List<Job> Jobs {get; set;} = new List<Job>();
     public Job(string title, string description, ContactInfo contactInfo)
     {
@@ -14,10 +15,15 @@ namespace JobBoard.Models
       Description = description;
       ContactInfo = contactInfo;
       Jobs.Add(this);
+      Id = Jobs.Count;
     }
     public static void ClearAll()
     {
       Jobs.Clear();
+    }
+    public static Job Find(int searchId)
+    { 
+      return Jobs[searchId-1];
     }
   }
   public class ContactInfo
