@@ -9,11 +9,10 @@
 
   @foreach (Job job in Model)
   {
-    <p>@job.Title</p>
+    <h3>@job.Title</h3>
     <p>@job.Description</p>
-    <h3>Contact Info</h3>
-    <p>@job.ContactInfo.Name</p>
-    <p>@job.ContactInfo.PhoneNumber</p>
-    <p>@job.ContactInfo.Email</p>
+    <p>@job.Id</p>
+
+    <a href="/jobs/@job.Id"><p>See Info</p></a>
   }
   

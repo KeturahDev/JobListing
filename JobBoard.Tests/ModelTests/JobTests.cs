@@ -45,7 +45,6 @@ namespace JobBoard.Tests
       Job jobResult = Job.Find(1);
 
       Assert.AreEqual(newJob.Title,jobResult.Title);
-
     }
   }
   [TestClass]
