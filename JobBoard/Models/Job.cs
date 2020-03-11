@@ -7,11 +7,17 @@ namespace JobBoard.Models
     public string Title {get;set;}
     public string Description {get;set;}
     public ContactInfo ContactInfo {get;set;}
+    public static List<Job> Jobs {get; set;} = new List<Job>();
     public Job(string title, string description, ContactInfo contactInfo)
     {
       Title = title;
       Description = description;
       ContactInfo = contactInfo;
+      Jobs.Add(this);
+    }
+    public static void ClearAll()
+    {
+      Jobs.Clear();
     }
   }
   public class ContactInfo

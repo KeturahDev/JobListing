@@ -6,12 +6,12 @@ using System;
 namespace JobBoard.Tests 
 {
   [TestClass]
-  public class JobTest //: IDisposable
+  public class JobTest : IDisposable
   {
-    // public void Dispose()
-    // {
-    //   Job.ClearAll();
-    // }
+    public void Dispose()
+    {
+      Job.ClearAll();
+    }
 
     [TestMethod]
     public void JobConstructor_CreatesInstanceOfJob_Job()
@@ -22,6 +22,19 @@ namespace JobBoard.Tests
       Job resultJob = newJob;
 
       Assert.AreEqual("web developer", resultJob.Title);
+    }
+    [TestMethod]
+    public void GetAll_ReturnAllJobsinListOfJobs_List()
+    {
+      ContactInfo employer1 = new ContactInfo("Mark", 333, "yomark@gmail.com");
+      Job newJob1 = new Job ("web developer", "making good websites", employer1);
+      ContactInfo employer2 = new ContactInfo("Mike", 444, "yomike@gmail.com");
+      Job newJob2 = new Job ("software developer", "making bad websites", employer2);
+
+      Job resultJob1 = newJob1;
+      Job resultJob2 = newJob2;
+
+      Assert.AreEqual("software dev", Job.Jobs[1].Title);
     }
   }
   [TestClass]

@@ -1,0 +1,22 @@
+@{ Layout = "Layout"; }
+
+<h1>Create a new Job Listing</h1>
+
+<form action="/jobs" method="post">
+  <label for="title">Enter Job Title</label>
+  <input type="text" name="title" id="title">
+
+  <label for="description">Enter Job description</label>
+  <input type="text" name="description" id="description">
+  <h3>Contact Info</h3>
+  <label for="name">Enter Name</label>
+  <input type="text" name="name" id="name">
+
+  <label for="number">Enter number</label>
+  <input type="number" name="number" id="number">
+  
+  <label for="email">Enter email</label>
+  <input type="text" name="email" id="email">
+
+  <button type="submit">Add</button>
+</form>
