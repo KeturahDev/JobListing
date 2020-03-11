@@ -24,7 +24,7 @@ namespace JobBoard.Tests
       Assert.AreEqual("web developer", resultJob.Title);
     }
     [TestMethod]
-    public void GetAll_ReturnAllJobsinListOfJobs_List()
+    public void InstantiateList_ReturnAllJobsinListOfJobs_List()
     {
       ContactInfo employer1 = new ContactInfo("Mark", 333, "yomark@gmail.com");
       Job newJob1 = new Job ("web developer", "making good websites", employer1);
