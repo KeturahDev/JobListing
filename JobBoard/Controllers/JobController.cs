@@ -6,12 +6,12 @@ namespace JobBoard.Controllers
 {
   public class JobController : Controller
   {
-    // [HttpGet("/jobs")]
-    // public ActionResult Index() 
-    // { 
-    //   List<Job> allJobs = Job.GetAll();
-    //   return View(jobs); 
-    // }
+    [HttpGet("/jobs")]
+    public ActionResult Index() 
+    { 
+      List<Job> allJobs = Job.Jobs;
+      return View(allJobs); 
+    }
 
     [HttpGet("/jobs/new")]
     public ActionResult New() { return View(); }
