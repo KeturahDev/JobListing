@@ -5,3 +5,113 @@
 <h1>Home</h1>
 
 <p>Welcome. Post stuff you find please. :)</p>
+
+<p>commit 6</p>
+
+<!-- We communicated through comments on the files when we lost connection and I'm so proud of us -->
+
+<!-- mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| my_database        |
+| mysql              |
+| performance_schema |
+| sys                |
+| to_do_list         |
+| to_do_list_test    |
++--------------------+
+7 rows in set (0.00 sec)
+
+mysql> CREATE DATABASE job_listing;
+Query OK, 1 row affected (0.02 sec)
+
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| job_listing        |
+| my_database        |
+| mysql              |
+| performance_schema |
+| sys                |
+| to_do_list         |
+| to_do_list_test    |
++--------------------+
+8 rows in set (0.00 sec)
+
+mysql> USE job-listing;
+ERROR 1049 (42000): Unknown database 'job-listing'
+mysql> USE job_listing;
+Database changed
+mysql> SELECT DATABASE();
++-------------+
+| DATABASE()  |
++-------------+
+| job_listing |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> CREATE TABLE listed_jobs (title VARCHAR (255). descrition VARCHAR (255), contact_name VARCHAR (255), phonenumber INT, email VARCHAR (255));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '. descrition VARCHAR (255), contact_name VARCHAR (255), phonenumber INT, email V' at line 1
+mysql> CREATE TABLE listed_jobs (title VARCHAR (255), descrition VARCHAR (255), contact_name VARCHAR (255), phonenumber INT, email VARCHAR (255));
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> DESCRIBE listed_jobs
+    -> 
+    -> ;
++--------------+--------------+------+-----+---------+-------+
+| Field        | Type         | Null | Key | Default | Extra |
++--------------+--------------+------+-----+---------+-------+
+| title        | varchar(255) | YES  |     | NULL    |       |
+| descrition   | varchar(255) | YES  |     | NULL    |       |
+| contact_name | varchar(255) | YES  |     | NULL    |       |
+| phonenumber  | int(11)      | YES  |     | NULL    |       |
+| email        | varchar(255) | YES  |     | NULL    |       |
++--------------+--------------+------+-----+---------+-------+
+5 rows in set (0.01 sec)
+
+mysql> ALTER TABLE listed_jobs ADD id serial PRIMARY KEY;
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESCRIBE listed_jobs
+    -> DESCRIBE listed_jobs;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DESCRIBE listed_jobs' at line 2
+mysql> DESCRIBE listed_jobs;
++--------------+---------------------+------+-----+---------+----------------+
+| Field        | Type                | Null | Key | Default | Extra          |
++--------------+---------------------+------+-----+---------+----------------+
+| title        | varchar(255)        | YES  |     | NULL    |                |
+| descrition   | varchar(255)        | YES  |     | NULL    |                |
+| contact_name | varchar(255)        | YES  |     | NULL    |                |
+| phonenumber  | int(11)             | YES  |     | NULL    |                |
+| email        | varchar(255)        | YES  |     | NULL    |                |
+| id           | bigint(20) unsigned | NO   | PRI | NULL    | auto_increment |
++--------------+---------------------+------+-----+---------+----------------+
+6 rows in set (0.00 sec)
+
+mysql> INSERT INTO listed_jobs (title, description, contact_name, phonenumber, email) VALUES ('Web Developer', 'Entry level position', 'Maggie', 333, 'maggi@magmags.com');
+ERROR 1054 (42S22): Unknown column 'description' in 'field list'
+mysql> INSERT INTO listed_jobs (title, descrition, contact_name, phonenumber, email) VALUES ('Web Developer', 'Entry level position', 'Maggie', 333, 'maggi@magmags.com');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> SELECT * FROM listed_jobs;
++---------------+----------------------+--------------+-------------+-------------------+----+
+| title         | descrition           | contact_name | phonenumber | email             | id |
++---------------+----------------------+--------------+-------------+-------------------+----+
+| Web Developer | Entry level position | Maggie       |         333 | maggi@magmags.com |  1 |
++---------------+----------------------+--------------+-------------+-------------------+----+
+1 row in set (0.00 sec)
+
+mysql> SELECT title FROM listed_jobs;
++---------------+
+| title         |
++---------------+
+| Web Developer |
++---------------+
+1 row in set (0.00 sec)
+
+mysql>  -->

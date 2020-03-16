@@ -1,8 +1,10 @@
 using System.Collections.Generic;
 
+
 namespace JobBoard.Models
 {
   public class Job
+
   {
     public string Title {get;set;}
     public string Description {get;set;}
@@ -28,6 +30,8 @@ namespace JobBoard.Models
   }
   public class ContactInfo
   {
+
+
     public string Name {get;set;}
     public int PhoneNumber {get;set;}
     public string Email {get;set;}
