@@ -2,11 +2,11 @@
 
 #### C# Week 3 Practice Project _March 5th 2020_
 
-#### By _**Keturah Howard and Stephanie Podolak**_
+#### By _**Keturah Howard and Benjamin**_
 
 ## Description
 
-Input the word youve used in your scrabble game, and recieve the score for that word! Make sure you make it a real word first though. Functionality for this will be available in 2021!
+Job listing webset to simulate adding and removing jobs with RESTful routing.
 
 This project is being created with the intention of practing object-in-object functionality, and MSTesting with C#.
 
